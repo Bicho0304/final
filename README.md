@@ -73,22 +73,21 @@
     eres mi reina hermosa<br>
     la mujer y la niña de mis ojos<br>
     <br>TE AMO DE AQUI A LA LUNA<br>A PASITOS DE TORTUGA</div>
-    
+    <img src="corazon1.gif" class="gif-romantico" style="top: 10%; left: 10%;">
+    <img src="corazon2.gif" class="gif-romantico" style="top: 10%; right: 10%;">
+    <img src="corazon3.gif" class="gif-romantico" style="bottom: 10%; left: 10%;">
+    <img src="corazon4.gif" class="gif-romantico" style="bottom: 10%; right: 10%;">
     <script>
         function iniciarRompecabezas() {
             document.getElementById("carta-animada").style.display = "none";
             document.getElementById("mensaje").style.display = "none";
             document.getElementById("puzzle-container").style.display = "grid";
-            
             // Iniciar música
             document.getElementById("musica-romantica").play();
-            
             let puzzleContainer = document.getElementById("puzzle-container");
             puzzleContainer.innerHTML = ""; // Limpiar antes de crear
-            
             let filas = 3;
             let columnas = 3;
-            
             for (let y = 0; y < filas; y++) {
                 for (let x = 0; x < columnas; x++) {
                     let pieza = document.createElement("div");
@@ -97,7 +96,6 @@
                     puzzleContainer.appendChild(pieza);
                 }
             }
-            
             let piezas = document.querySelectorAll(".puzzle-piece");
             piezas.forEach((pieza, index) => {
                 setTimeout(() => {
@@ -105,7 +103,6 @@
                     pieza.style.transform = "scale(1)";
                 }, index * 500);
             });
-            
             setTimeout(() => {
                 let mensajeFinal = document.getElementById("mensaje-final");
                 mensajeFinal.style.display = "block";
